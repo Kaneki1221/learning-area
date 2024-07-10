@@ -8,9 +8,13 @@ body {
   img {
       max-width: 100%;
       display: block;
+      float: left;
+      
+      
   }
-  
+ 
   .logo {
+   
     font-size: 200%;
     padding: 50px 20px;
     margin: 0 auto;
@@ -18,17 +22,38 @@ body {
   }
   
   .grid {
+    display: grid;
+    
+    grid-template-columns: "article" "article"
+    "aside" "aside";
+    grid-template-columns: 80% auto;
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
+
+   
   }
   
+  article{
+    grid-area: "article";
+   
+
+  }
+  aside{
+    grid-area: "aside";
+   
+  }
   nav {
+    
+   
     background-color: #000;
     padding: .5em;
   }
   
   nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -41,11 +66,14 @@ body {
   }
   
   .photos {
-    list-style: none;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    list-style:none;
     margin: 0;
     padding: 0;
   }
 
   .feature {
       width: 200px;
+      padding: 20px;
   }
